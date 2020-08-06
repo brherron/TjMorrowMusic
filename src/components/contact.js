@@ -29,8 +29,8 @@ const Contact = () => {
                   data-netlify="true"
                   data-netlify-honeypot="bot-field">
               <input type="text" name="email" placeholder="Your Name" />
-              <input type="textarea" name="message" placeholder="Your Message" />
-              <button>GET IN TOUCH</button>
+              <textarea name="message" placeholder="Your Message" />
+              <button type="submit">GET IN TOUCH</button>
             </form>
           </div>
         </div>
