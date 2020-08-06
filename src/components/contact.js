@@ -24,10 +24,14 @@ const Contact = () => {
         </div>
         <div className="right-container">
           <div className="main">
-            
-            <a>
-              GET IN TOUCH
-            </a>
+            <form method="post" 
+                  name="tj-morrow-contact" 
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field">
+              <input type="text" name="email" placeholder="Your Name" />
+              <input type="textarea" name="message" placeholder="Your Message" />
+              <button>GET IN TOUCH</button>
+            </form>
           </div>
         </div>
       </div>
