@@ -2,10 +2,6 @@ import React from 'react';
 
 const Contact = () => {
 
-  const primaryEmail = "beau@murraymacrecords.com"
-  const secondaryEmail = "brherron@wisc.edu"
-  const message = "Hey just wanted to reach out!"
-
   return (
     <div id="contact" className="contact">
       <div className="container">
