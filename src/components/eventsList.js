@@ -17,7 +17,6 @@ function EventsList() {
 
   if (currentDate > lastEventDate) {
     upcomingShows = false
-    console.log(currentDate > lastEventDate)
   }
 
   if (data[0].artist) {
@@ -25,7 +24,7 @@ function EventsList() {
   }
 
   const eventsList = events.map((event) =>
-    <li>
+    <li key={event.id}>
       <span className="date">
         {formatter.format(new Date(event.datetime)).toUpperCase()}
       </span>
