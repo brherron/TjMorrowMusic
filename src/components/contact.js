@@ -1,7 +1,8 @@
 import React from 'react';
+import ContactForm from '../components/contactForm'
+
 
 const Contact = () => {
-
   return (
     <div id="contact" className="contact">
       <div className="container">
@@ -20,19 +21,7 @@ const Contact = () => {
         </div>
         <div className="right-container">
           <div className="main" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
-            <form method="post"
-                  name="tj-morrow-contact" 
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field">
-              <h1>Contact</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-              <input type="hidden" name="form-name" value="tj-morrow-contact"></input>
-              <input className="email" type="text" name="email" placeholder="  Your Email" />
-              <textarea className="message" name="message" placeholder="  Your Message" />
-              <div className="submit-button">  
-                <button>GET IN TOUCH</button>
-              </div>
-            </form>
+            <ContactForm />
           </div>
           <div className="footer-underlay">
             <div className="footer">

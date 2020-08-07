@@ -723,6 +723,12 @@ header {
           .submit-button {
             width: 100%;
 
+            .form-error {
+              font-size: 0.7rem;
+              color: #D0D0D0;
+              padding-left: 1rem;
+            }
+
             button {
               padding: 0.3rem 1.7rem;
               background-color: transparent;
@@ -827,8 +833,61 @@ header {
   }
 }
 
-@include keyframes (on) {
-  100% {
-    opacity: 1;
-  }
+
+
+// FADE-IN ANIMATION //
+.fadeIn {
+  -webkit-animation: fade-in 0.3s infinite;
+  -moz-animation:    fade-in 0.3s infinite;
+  -o-animation:      fade-in 0.3s infinite;
+  animation:         fade-in 0.3s infinite;
+}
+@-webkit-keyframes fade-in {
+  0% { display: none; opacity: 0; }
+  1% { display: block; opacity: 0; }
+  100% { display: block; opacity: 1;}
+}
+@-moz-keyframes fade-in {
+  0% { display: none; opacity: 0; }
+  1% { display: block; opacity: 0; }
+  100% { display: block; opacity: 1;}
+}
+@-o-keyframes fade-in {
+  0% { display: none; opacity: 0; }
+  1% { display: block; opacity: 0; }
+  100% { display: block; opacity: 1;}
+}
+@keyframes fade-in {
+  0% { display: none; opacity: 0; }
+  1% { display: block; opacity: 0; }
+  100% { display: block; opacity: 1;}
+}
+
+
+// PULSE ANIMATION //
+.pulse {
+  -webkit-animation: pulse 1.5s infinite;
+  -moz-animation:    pulse 1.5s infinite;
+  -o-animation:      pulse 1.5s infinite;
+  animation:         pulse 1.5s infinite;
+}
+@-webkit-keyframes pulse {
+  0%   { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@-moz-keyframes pulse {
+  0%   { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@-o-keyframes pulse {
+  0%   { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@keyframes pulse {
+  0%   { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 0.3; }
 }
