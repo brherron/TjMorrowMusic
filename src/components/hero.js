@@ -28,6 +28,7 @@ const Hero = () => {
   function clickAlbum(e) {
     setLeftAlbumActive(!leftAlbumActive);
     e.target.parentNode.style.left = leftAlbumActive ? "-80%" : "0%";
+    e.target.parentNode.parentNode.parentNode.style.left = leftAlbumActive ? "-5%" : "-20%";
   }
 
   return (
@@ -52,9 +53,8 @@ const Hero = () => {
                 <div role="button" tabIndex={0} className={leftAlbumActive ? "album2 inactive-album" : "album2 active-album"} onClick={clickAlbum} onKeyDown={clickAlbum}></div>
               </div>
               <div className="album-text">
-                <span>
-                  {leftAlbumActive ? "Live and Learn is the 2019 debut album for Tj Morrow." : "Dive Bar is the latest single from singer/songwriter Tj Morrow."}
-                </span>
+                <p className={!leftAlbumActive ? "hidden-text" : "visible-text"}>Live and Learn is the 2019 debut album for Tj Morrow.</p>
+                <p className={leftAlbumActive ? "hidden-text" : "visible-text"}>Dive Bar is the latest single from singer/songwriter Tj Morrow.</p>
                 <br />
                 <br />
                 <a className="listen-now" target="_blank" rel="noopener noreferrer" href="http://hyperurl.co/LiveAndLearn">GET IT HERE</a>

@@ -84,6 +84,7 @@ h1 {
   font-size: 26px;
   letter-spacing: 5px;
   text-transform: uppercase;
+  pointer-events: none;
 }
 
 //Header
@@ -106,6 +107,8 @@ header {
     .logo {
       align-items: center;
       position: relative;
+      pointer-events: none;
+      
       img {
         display: block;
         height: 50px;
@@ -243,6 +246,7 @@ header {
         height: 90%;
         left: -5%;
         position: relative;
+        transition: 0.5s;
 
         .album-frame {
           display: flex;
@@ -346,11 +350,12 @@ header {
           
           .album-text {
             height: 30%;
-            position: relative;
+            position: absolute;
             padding: 3rem;
             top: 40%;
             left: 5%;
             width: 94%;
+            height: auto;
             color: #D0D0D0;
             font-size: 0.85rem;
             line-height: 1.4rem;
@@ -358,6 +363,20 @@ header {
             text-align: end;
             pointer-events: none;
             transition: 0.3s;
+
+            .hidden-text {
+              margin: 0;
+              visibility: hidden;
+              height: 0;
+              opacity: 0;
+            }
+            .visible-text {
+              margin: 0;
+              opacity: 1;
+              height: auto;
+              visibility: visible;
+              transition: 0.3s;
+            }
 
             .listen-now {
               color: #9B8E74;
@@ -585,6 +604,7 @@ header {
             font-weight: 500;
             display: inline-block;
             padding-right: 0.3rem;
+            pointer-events: none;
           }
           .instagram {
             padding: 0 0.3rem;
@@ -660,6 +680,7 @@ header {
             font-size: 0.9rem;
             line-height: 1.7rem;
             margin-bottom: 2.5rem;
+            pointer-events: none;
           }
 
           .email, .message {
@@ -700,21 +721,24 @@ header {
             }
           }
           .submit {
-            padding: 0.3rem 1.7rem;
-            width: 35%;
-            background-color: transparent;
-            border: 1px solid #D0D0D0;
-            border-radius: 3px;
-            color: #D0D0D0;
-            font-size: 0.7rem;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-            transition: 0.3s;
+            width: 100%;
 
-            &:hover {
-              opacity: 0.6;
+            button {
+              padding: 0.3rem 1.7rem;
+              background-color: transparent;
+              border: 1px solid #D0D0D0;
+              border-radius: 3px;
+              color: #D0D0D0;
+              font-size: 0.7rem;
+              letter-spacing: 1px;
+              margin-bottom: 0.5rem;
               transition: 0.3s;
-              cursor: pointer;
+
+              &:hover {
+                opacity: 0.6;
+                transition: 0.3s;
+                cursor: pointer;
+              }
             }
           }
         }
@@ -758,6 +782,7 @@ header {
             align-items: flex-end;
             border-left: 1px solid #D0D0D0;
             padding-right: 4.5rem;
+            pointer-events: none;
             position: relative;
           }
           
@@ -776,14 +801,18 @@ header {
             font-weight: 300;
             
             span {
+              pointer-events: none;
+
               .portfolio {
                 text-decoration: underline!important;
+                pointer-events: all;
               }
 
               a {
                 text-decoration: none;
                 color: #D0D0D0;
                 transition: 0.3s;
+                pointer-events: all;
 
                 &:hover {
                   opacity: 0.6;

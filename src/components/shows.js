@@ -18,7 +18,7 @@ class Shows extends Component {
             <EventsList />
           </div>
             <div className="right-container">
-              <div className="main-img"></div>
+              <div className="main-img" data-aos="fade-up" data-aos-delay="000" data-aos-duration="500"></div>
             </div>
         </div>
       </div>

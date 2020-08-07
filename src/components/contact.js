@@ -10,10 +10,10 @@ const Contact = () => {
     <div id="contact" className="contact">
       <div className="container">
         <div className="left-container">
-          <div className="main" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+          <div className="main" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
             <div className="box"></div>
             <div className="image">
-              <div className="socials" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+              <div className="socials" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
                 <span className="follow">Follow</span> 
                 <a className="instagram" target="_blank" href="https://www.instagram.com/tjmorrowmusic/" rel="noopener noreferrer">IG.</a> — 
                 <a className="facebook" target="_blank" href="https://www.facebook.com/tjmorrowmusic/" rel="noopener noreferrer"> FB.</a> — 
@@ -23,8 +23,8 @@ const Contact = () => {
           </div>
         </div>
         <div className="right-container">
-          <div className="main">
-            <form method="post" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000"
+          <div className="main" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+            <form method="post"
                   name="tj-morrow-contact" 
                   data-netlify="true"
                   data-netlify-honeypot="bot-field">
@@ -32,7 +32,9 @@ const Contact = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
               <input className="email" type="email" name="email" placeholder="  Your Email" />
               <textarea className="message" name="message" placeholder="  Your Message" />
-              <button className="submit" type="submit">GET IN TOUCH</button>
+              <div className="submit">  
+                <button type="submit">GET IN TOUCH</button>
+              </div>
             </form>
           </div>
           <div className="footer-underlay">
