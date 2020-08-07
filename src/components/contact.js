@@ -24,9 +24,9 @@ const Contact = () => {
                   name="tj-morrow-contact" 
                   data-netlify="true"
                   data-netlify-honeypot="bot-field">
-              <h1>Contact</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-              <input className="email" type="text" name="email" placeholder="  Your Email" />
+              {/* <h1>Contact</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> */}
+              <input className="email" type="email" name="email" placeholder="  Your Email" />
               <textarea className="message" name="message" placeholder="  Your Message" />
               <div className="submit-button">  
                 <button>GET IN TOUCH</button>
