@@ -24,8 +24,9 @@ const Contact = () => {
                   name="tj-morrow-contact" 
                   data-netlify="true"
                   data-netlify-honeypot="bot-field">
-              {/* <h1>Contact</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p> */}
+              <h1>Contact</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <input type="hidden" name="form-name" value="tj-morrow-contact"></input>
               <input className="email" type="text" name="email" placeholder="  Your Email" />
               <textarea className="message" name="message" placeholder="  Your Message" />
               <div className="submit-button">  
