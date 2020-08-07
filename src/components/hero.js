@@ -1,27 +1,7 @@
 import React, { useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import { useScroll } from '../aux/useScroll.js'
 
 const Hero = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      mainText: file(relativePath: { eq: "TJ_MORROW@2x.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      },
-      mainImg: file(relativePath: { eq: "mainImg.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   const [ leftAlbumActive, setLeftAlbumActive] = useState(false);
   const  scrollY = useScroll().scrollY;
 
@@ -42,7 +22,6 @@ const Hero = () => {
             </div>
          </div>
          <div className="main-text" style={{bottom: (scrollY/30+40)+'%'}}>
-          <Img fluid={data.mainText.childImageSharp.fluid} />
          </div>
         </div>
         <div className="right-container">
