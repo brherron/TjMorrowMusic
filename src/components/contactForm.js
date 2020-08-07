@@ -66,7 +66,7 @@ const ContactForm = () => {
       <textarea className="message" name="message" placeholder="  Your Message" />
       <div className="submit-button">
         <button>GET IN TOUCH</button>
-        <span className={pulseAnimation ? "form-error pulse" : "form-error"}>{submitText}</span>
+        <span className={pulseAnimation ? "form-error pulse" : "form-error fadeIn"}>{submitText}</span>
       </div>
     </form>
   );

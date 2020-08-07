@@ -833,34 +833,34 @@ header {
   }
 }
 
+// Opening Animation
+@include keyframes (on) {
+  100% {
+    opacity: 1;
+  }
+}
 
-
-// FADE-IN ANIMATION //
 .fadeIn {
-  -webkit-animation: fade-in 0.3s infinite;
-  -moz-animation:    fade-in 0.3s infinite;
-  -o-animation:      fade-in 0.3s infinite;
-  animation:         fade-in 0.3s infinite;
+  -webkit-animation: fade-in 0.3s ease-in;
+  -moz-animation:    fade-in 0.3s ease-in;
+  -o-animation:      fade-in 0.3s ease-in;
+  animation:         fade-in 0.3s ease-in;
 }
 @-webkit-keyframes fade-in {
-  0% { display: none; opacity: 0; }
-  1% { display: block; opacity: 0; }
-  100% { display: block; opacity: 1;}
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 @-moz-keyframes fade-in {
-  0% { display: none; opacity: 0; }
-  1% { display: block; opacity: 0; }
-  100% { display: block; opacity: 1;}
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 @-o-keyframes fade-in {
-  0% { display: none; opacity: 0; }
-  1% { display: block; opacity: 0; }
-  100% { display: block; opacity: 1;}
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 @keyframes fade-in {
-  0% { display: none; opacity: 0; }
-  1% { display: block; opacity: 0; }
-  100% { display: block; opacity: 1;}
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 
@@ -871,6 +871,7 @@ header {
   -o-animation:      pulse 1.5s infinite;
   animation:         pulse 1.5s infinite;
 }
+
 @-webkit-keyframes pulse {
   0%   { opacity: 0.3; }
   65% { opacity: 1; }
