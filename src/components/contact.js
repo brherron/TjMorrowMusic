@@ -24,14 +24,31 @@ const Contact = () => {
         </div>
         <div className="right-container">
           <div className="main">
-            <form method="post" 
+            <form method="post" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000"
                   name="tj-morrow-contact" 
                   data-netlify="true"
                   data-netlify-honeypot="bot-field">
-              <input type="text" name="email" placeholder="Your Name" />
-              <textarea name="message" placeholder="Your Message" />
-              <button type="submit">GET IN TOUCH</button>
+              <h1>Contact</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              <input className="email" type="text" name="email" placeholder="  Your Email" />
+              <textarea className="message" name="message" placeholder="  Your Message" />
+              <div className="submit">  
+                <button type="submit">GET IN TOUCH</button>
+              </div>
             </form>
+          </div>
+          <div className="footer-underlay">
+            <div className="footer">
+              <div className="copywrite">
+                <span>© 2020 <a href="https://www.murraymacrecords.com" target="_blank" rel="noopener noreferrer">MurrayMac Records</a>. All Rights Reserved.</span>
+                <span>
+                  <a href="https://app.termly.io/document/privacy-policy/379b132b-4524-49d3-a460-27a2e7f5c731" target="_blank" rel="noopener noreferrer">Privacy Policy</a>  |  <a href="https://www.termsfeed.com/terms-conditions/dd12b0379f89cdd2456eb1728526ef28" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></span>
+                <span>Created by <a href="https://www.beauherrondev.com" target="_blank" rel="noopener noreferrer" className="portfolio">BHD</a></span>
+              </div>
+              <div className="vertical-text">
+                <h2>TJ<span>MORROW</span>MUSIC</h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
