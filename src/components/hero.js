@@ -32,11 +32,11 @@ const Hero = () => {
                 <div role="button" tabIndex={0} className={leftAlbumActive ? "album2 inactive-album" : "album2 active-album"} onClick={clickAlbum} onKeyDown={clickAlbum}></div>
               </div>
               <div className="album-text">
-                <p className={!leftAlbumActive ? "hidden-text" : "visible-text"}>Live and Learn is the 2019 debut album for Tj Morrow.</p>
-                <p className={leftAlbumActive ? "hidden-text" : "visible-text"}>Dive Bar is the latest single from singer/songwriter Tj Morrow.</p>
+                <p className={!leftAlbumActive ? "hidden-text" : "visible-text"}>Live and Learn is the 2019 debut EP for country artist Tj Morrow.</p>
+                <p className={leftAlbumActive ? "hidden-text" : "visible-text"}>Released in August 2020, Dive Bar is the latest single from singer/songwriter Tj Morrow.</p>
                 <br />
                 <br />
-                <a className="listen-now" target="_blank" rel="noopener noreferrer" href="http://hyperurl.co/LiveAndLearn">GET IT HERE</a>
+                <a className="listen-now" target="_blank" rel="noopener noreferrer" href={!leftAlbumActive ? "http://hyperurl.co/LittleDiveBar" : "http://hyperurl.co/LiveAndLearn"}>GET IT HERE</a>
               </div>
             </div>
           </div>

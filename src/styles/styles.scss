@@ -259,7 +259,7 @@ header {
           flex-wrap: wrap;
           height: 900px;
           width: 60%;
-          top: 27%;
+          top: 23%;
           border: 0.15rem solid #9B8E74; 
 
           .album-slider {
@@ -709,10 +709,17 @@ header {
           .email {
             width: 50%;
 
-            &:focus, &:hover {
+            &:hover {
               opacity: 1;
               transition: 0.3s;
               outline: none;
+            }
+            &:focus {
+              opacity: 1;
+              transition: 0.3s;
+              outline: none;
+              width: 60%;
+              height: 7%;
             }
           }
           .message {
