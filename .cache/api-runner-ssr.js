@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/beauherron/Documents/Developer/FrontEnd/Tj Morrow Website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#000000","theme_color":"#000000","display":"minimal-ui","icon":"src/images/gatsby-icon.png"},
+      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#000000","theme_color":"#000000","display":"minimal-ui","icon":"src/images/favicon.svg"},
     },{
       plugin: require('/Users/beauherron/Documents/Developer/FrontEnd/Tj Morrow Website/node_modules/gatsby-plugin-transition-link/gatsby-ssr'),
       options: {"plugins":[]},

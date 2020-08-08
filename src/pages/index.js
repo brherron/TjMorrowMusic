@@ -18,6 +18,7 @@ class IndexPage extends Component {
   render() {
     return (
       <div>
+        <SEO title="TJ MORROW" />
         <Header />
         <Hero />
         <Shows />

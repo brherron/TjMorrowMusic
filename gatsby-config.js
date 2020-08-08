@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `BHD.`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Country Music`,
+    description: `The official website for midwest country musician Tj Morrow. Find up-to-date music, shows, and contact information.`,
+    author: `@brherron`,
+    siteUrl: `https://www.tjmorrowmusic.com`
   },
   plugins: [
     {
@@ -33,7 +34,7 @@ module.exports = {
         background_color: `#000000`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.svg`,
       },
     },
     `gatsby-plugin-sass`,
