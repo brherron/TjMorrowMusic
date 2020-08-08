@@ -455,6 +455,13 @@ header {
           height: 70%;
           margin-left: 10%;
 
+          .error-text {
+            color: #D0D0D0;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+          }
+
           li {
             display: flex;
             list-style: none;

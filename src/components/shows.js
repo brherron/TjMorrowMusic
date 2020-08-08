@@ -5,10 +5,11 @@ import AOS from 'aos'
 import "aos/dist/aos.css"
 
 class Shows extends Component {
+
   componentDidMount() {
     AOS.init();
     AOS.refresh();
-  }
+  };
 
   render () {
     return (
@@ -25,6 +26,5 @@ class Shows extends Component {
     )
   }
 }
-
 
 export default Shows
