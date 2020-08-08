@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="main">
             <div className="main-img" style={{backgroundPositionY: (scrollY/40+70)+'%'}}></div>
             <div className="bio-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. 
+              Tj Morrow first picked up a guitar while in college and he hasn't looked back since. The midwest-based artist has performed in many bands throughout his 10 years of playing music. In 2019 he released his debut EP as a solo country artist.
             </div>
          </div>
          <div className="main-text" style={{bottom: (scrollY/30+40)+'%'}}>

@@ -59,7 +59,7 @@ const ContactForm = () => {
         data-netlify-honeypot="bot-field"
         onSubmit={e => onSubmit(e, setSubmitText, setPulseAnimation)}>
       <h1>Contact</h1>
-      <p>For booking inquiries or for more information, send a message below. You may also reach out on any social media platform.</p>
+      <p>For booking inquiries or for more information, send a message below. If email isn't your thing you can reach out on social media.</p>
       <input type="hidden" name="form-name" value="tj-morrow-contact"/>
       <input type="hidden" name="bot-field" />
       <input className="email" type="text" name="email" placeholder="  Your Email" />
