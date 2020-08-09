@@ -1,0 +1,765 @@
+// ------------- CONTACT ------------ //
+//Contact Section
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  position: relative;
+  height: 100vh;
+  z-index: 10;
+
+  .container {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    padding: 0 50px;
+    padding-right: 0;
+
+    .left-container {
+      display: flex;
+      height: 100%;
+      width: 45%;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 75%;
+        height: 70%;
+        bottom: 10%;
+        position: relative;
+
+        .box {
+          position: absolute;
+          height: 40%;
+          width: 30%;
+          background-color: #9B8E74;
+        }
+
+        .image {
+          position: absolute;
+          height: 0;
+          padding-top: 100%;
+          width: 80%;
+          background-image: url("../images/contactImg@2x.jpg");
+          background-size: cover;
+          margin-top: 10%;
+          right: 10%;
+        }
+
+        .socials {
+          position: absolute;
+          width: 100%;
+          bottom: -10%;
+          color: #D0D0D0;
+          font-weight: 300;
+          font-size: 1.1rem;
+
+          .follow { 
+            color: #9B8E74;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            font-weight: 500;
+            display: inline-block;
+            padding-right: 0.3rem;
+            pointer-events: none;
+          }
+          .instagram {
+            padding: 0 0.3rem;
+            text-decoration: none;
+            color: #D0D0D0;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            &:hover {
+              opacity: 0.6;
+              transition: 0.2s;
+            }
+          }
+          .facebook {
+            padding: 0 0.5rem;
+            text-decoration: none;
+            color: #D0D0D0;
+            cursor: pointer;
+            position: relative;
+            &:hover {
+              opacity: 0.6;
+              transition: 0.3s;
+            }
+          }
+          .spotify {
+            padding: 0 0.5rem;
+            text-decoration: none;
+            color: #D0D0D0;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            &:hover {
+              opacity: 0.6;
+              transition: 0.2s;
+            }
+          }
+        }
+      }
+    }
+
+    .right-container {
+      display: flex;
+      height: 100%;
+      width: 60%;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 5%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 75%;
+        height: 70%;
+        bottom: 10%;
+        position: relative;
+        z-index: 1;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: flex-end;
+          position: absolute;
+          height: 79%;
+          width: 80%;
+
+          p {
+            color: #D0D0D0;
+            font-size: 0.9rem;
+            line-height: 1.7rem;
+            margin-bottom: 2.5rem;
+            pointer-events: none;
+          }
+
+          .email, .message {
+            margin-bottom: 1.5rem;
+            background-color: transparent;
+            border-bottom: 2px solid #9B8E74;
+            padding-bottom: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 300;
+            transition: 0.3s;
+            opacity: 0.6;
+          }
+
+          .email {
+            width: 50%;
+
+            &:hover {
+              opacity: 1;
+              transition: 0.3s;
+              outline: none;
+            }
+            &:focus {
+              opacity: 1;
+              transition: 0.3s;
+              outline: none;
+              width: 60%;
+              height: 7%;
+            }
+          }
+          .message {
+            width: 75%;
+            height: 6%;
+            font-family: inherit;
+
+            &:hover {
+              opacity: 1;
+              transition: 0.3s;
+              outline: none;
+            }
+            &:focus {
+              opacity: 1;
+              transition: 0.3s;
+              outline: none;
+              width: 100%;
+              height: 10%;
+            }
+          }
+          .submit-button {
+            width: 100%;
+
+            .form-error {
+              font-size: 0.7rem;
+              color: #D0D0D0;
+              padding-left: 1rem;
+            }
+
+            button {
+              padding: 0.3rem 1.7rem;
+              background-color: transparent;
+              border: 1px solid #D0D0D0;
+              border-radius: 3px;
+              color: #D0D0D0;
+              font-size: 0.7rem;
+              letter-spacing: 1px;
+              margin-bottom: 0.5rem;
+              transition: 0.3s;
+
+              &:hover {
+                opacity: 0.6;
+                transition: 0.3s;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-underlay {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+
+        .footer {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          width: 75%;
+          height: 70%;
+          position: absolute;
+          padding-bottom: 3rem;
+
+          .vertical-text {
+            h2 {
+              writing-mode: vertical-lr;
+              transform-origin: center center;
+              transform: rotate(180deg);
+              letter-spacing: 0.6rem;
+              font-size: 1.4rem;
+              color: #D0D0D0;
+              padding-top: 0.5rem;
+
+              span {
+                color: #9B8E74;
+              }
+            }
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            border-left: 1px solid #D0D0D0;
+            padding-right: 4.5rem;
+            pointer-events: none;
+            position: relative;
+          }
+          
+          .copywrite {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            position: relative;
+            padding-bottom: 0.5rem;
+            padding-right: 1.5rem;
+            font-size: 0.7rem;
+            color: #D0D0D0;
+            line-height: 1.3rem;
+            font-weight: 300;
+            
+            span {
+              pointer-events: none;
+
+              .portfolio {
+                text-decoration: underline!important;
+                pointer-events: all;
+              }
+
+              a {
+                text-decoration: none;
+                color: #D0D0D0;
+                transition: 0.3s;
+                pointer-events: all;
+
+                &:hover {
+                  opacity: 0.6;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    .contact {
+      padding-top: 3rem;
+      height: auto;
+    }
+    .contact .container {
+      padding: 0;
+      flex-wrap: wrap;
+      position: relative;
+
+      .right-container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        justify-content: center;
+        
+        .main {
+          height: 90%;
+          width: 85%;
+          margin-left: 0;
+          
+          form {
+            width: 100%;
+            justify-content: center;
+
+            h1 {
+              font-size: 1.1rem;
+            }
+
+            p {
+              font-size: 0.6rem;
+            }
+          }
+        }
+
+        .footer-underlay .footer {
+          width: 100%;
+          padding-bottom: 1rem;
+
+          .vertical-text {
+            display: none;
+          }
+
+          .copywrite {
+            width: 100%;
+            font-size: 0.6rem;
+          }
+        }
+      }
+
+      .left-container {
+        display: none;
+      }
+    }
+}
+
+
+
+
+
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .contact {
+      padding-top: 3rem;
+      height: auto;
+    }
+    .contact .container {
+      padding: 0;
+      flex-wrap: wrap;
+      position: relative;
+
+      .right-container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        justify-content: center;
+        
+        .main {
+          height: 90%;
+          width: 85%;
+          margin-left: 0;
+          
+          form {
+            width: 100%;
+            justify-content: center;
+
+            h1 {
+              font-size: 1.1rem;
+            }
+
+            p {
+              font-size: 0.6rem;
+            }
+          }
+        }
+
+        .footer-underlay .footer {
+          width: 100%;
+          padding-bottom: 1rem;
+
+          .vertical-text {
+            display: none;
+          }
+
+          .copywrite {
+            width: 100%;
+            font-size: 0.6rem;
+          }
+        }
+      }
+
+      .left-container {
+        display: none;
+      }
+    }
+}
+
+
+
+
+
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .contact {
+      height: 60vh;
+    }
+    .contact .container {
+      padding: 0;
+    }
+    .contact .container {
+      .left-container, .right-container {
+        width: 50%;
+      }
+    }
+    .contact .container .right-container .main {
+      width: 90%;
+    }
+    .contact .container .left-container .main .socials{
+      width: 100%;
+      font-size: 0.6rem;
+      .follow {
+        font-size: 0.4rem;
+      }
+    }
+    .contact .container .right-container .main form {
+      .email, .message {
+        font-size: 0.6rem;
+      }
+      .submit-button button {
+        font-size: 0.4rem;
+      }
+      p {
+        font-size: 0.4rem;
+      }
+    }
+    .contact .container .right-container .footer-underlay .footer {
+      padding-bottom: 1rem;
+      .copywrite {
+        font-size: 0.4rem;
+      }
+      .vertical-text {
+        display: none;
+        padding-right: 1rem;
+      }
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .contact .container {
+      padding: 0;
+    }
+    .contact .container {
+      .left-container, .right-container {
+        width: 50%;
+      }
+    }
+    .contact .container .right-container .main {
+      width: 90%;
+    }
+    .contact .container .left-container .main .socials{
+      width: 100%;
+      font-size: 0.8rem;
+      .follow {
+        font-size: 0.6rem;
+      }
+    }
+    .contact .container .right-container .main form {
+      .email, .message {
+        font-size: 0.6rem;
+      }
+      .submit-button button {
+        font-size: 0.5rem;
+      }
+      p {
+        font-size: 0.6rem;
+      }
+    }
+    .contact .container .right-container .footer-underlay .footer {
+      padding-bottom: 1rem;
+      .copywrite {
+        font-size: 0.5rem;
+      }
+      .vertical-text {
+        padding-right: 0.4rem;
+        h2 {
+          font-size: 0.9rem;
+        }
+      }
+    }
+}
+
+
+
+
+
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 833px) 
+  and (max-device-width: 835px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .contact {
+      height: 60vh;
+    }
+    .contact .container {
+      padding: 0;
+    }
+    .contact .container {
+      .left-container, .right-container {
+        width: 50%;
+      }
+    }
+    .contact .container .right-container .main {
+      width: 90%;
+    }
+    .contact .container .left-container .main .socials{
+      width: 100%;
+      font-size: 0.6rem;
+      .follow {
+        font-size: 0.4rem;
+      }
+    }
+    .contact .container .right-container .main form {
+      .email, .message {
+        font-size: 0.6rem;
+      }
+      .submit-button button {
+        font-size: 0.4rem;
+      }
+      p {
+        font-size: 0.5rem;
+      }
+    }
+    .contact .container .right-container .footer-underlay .footer {
+      padding-bottom: 1rem;
+      .copywrite {
+        font-size: 0.4rem;
+      }
+      .vertical-text {
+        display: none;
+        padding-right: 1rem;
+      }
+    }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .contact .container {
+      padding: 0;
+    }
+    .contact .container {
+      .left-container, .right-container {
+        width: 50%;
+      }
+    }
+    .contact .container .right-container .main {
+      width: 90%;
+    }
+    .contact .container .left-container .main .socials{
+      width: 100%;
+      font-size: 0.8rem;
+      .follow {
+        font-size: 0.6rem;
+      }
+    }
+    .contact .container .right-container .main form {
+      .email, .message {
+        font-size: 0.6rem;
+      }
+      .submit-button button {
+        font-size: 0.5rem;
+      }
+      p {
+        font-size: 0.6rem;
+      }
+    }
+    .contact .container .right-container .footer-underlay .footer {
+      padding-bottom: 1rem;
+      .copywrite {
+        font-size: 0.5rem;
+      }
+      .vertical-text {
+        padding-right: 0.4rem;
+        h2 {
+          font-size: 0.9rem;
+        }
+      }
+    }
+}
+
+
+
+
+
+
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 1024px) 
+and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen 
+and (min-device-width: 1024px) 
+and (max-device-width: 1024px) 
+and (orientation: portrait  ) 
+and (-webkit-min-device-pixel-ratio: 2)  {
+  .contact {
+    height: 60vh;
+  }
+  .contact .container .left-container .main .socials{
+    width: 100%;
+    font-size: 0.8rem;
+    .follow {
+      font-size: 0.5rem;
+    }
+  }
+  .contact .container .right-container .main form {
+    .email, .message {
+      font-size: 0.6rem;
+    }
+    .submit-button button {
+      font-size: 0.6rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+  }
+  .contact .container .right-container .footer-underlay .footer {
+    .copywrite {
+      font-size: 0.5rem;
+    }
+    .vertical-text {
+      padding-right: 1rem;
+    }
+  }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen 
+and (min-device-width: 1366px) 
+and (max-device-width: 1366px) 
+and (orientation: landscape) 
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+
+
+
+
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+
+
+
+
+
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  .contact .container {
+    width: 90%;
+  }
+}

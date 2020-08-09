@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import EventsList from './eventsList.js'
+import '../styles/shows.scss'
+
 
 import AOS from 'aos'
 import "aos/dist/aos.css"

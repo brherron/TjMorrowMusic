@@ -1,0 +1,494 @@
+// ------------- SHOWS ------------ //
+//Shows Section
+.shows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  position: relative;
+  height: 100vh;
+  z-index: 10;
+
+  .container {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    padding: 0 50px;
+
+    .left-container {
+      display: flex;
+      height: 100%;
+      width: 55%;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        height: 70%;
+        position: relative;
+
+        .show-more {
+          text-decoration: none;
+          color: #9B8E74;
+          width: 100%;
+          margin-left: 10%;
+          text-align: center;
+          transition: 0.3s;
+
+          &:hover {
+            color: #D0D0D0;
+            transition: 0.3s;
+          }
+        }
+        
+        .events {
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+          width: 90%;
+          height: 70%;
+          margin-left: 10%;
+
+          .error-text {
+            color: #D0D0D0;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+          }
+
+          li {
+            display: flex;
+            list-style: none;
+            height: 20%;
+            width: 100%;
+            border-bottom: 2px solid #D0D0D0;
+            color: #D0D0D0;
+            font-size: 0.9rem;
+
+            .date {
+              height: 100%;
+              width: 20%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-weight: 600;
+            }
+            .venue {
+              height: 100%;
+              width: 40%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-weight: 300;
+            }
+            .city {
+              height: 100%;
+              width: 40%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-weight: 300;
+            }
+            .rsvp {
+              height: 100%;
+              width: 20%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              a {
+                text-decoration: none;
+                color: #D0D0D0;
+                padding: 7px 20px;
+                font-size: 0.8rem;
+                font-weight: 500;
+                letter-spacing: 2px;
+                border-radius: 4px;
+                background-color: #9B8E74;
+                transition: 0.3s;
+                &:hover {
+                  opacity: 0.5;
+                  transition: 0.3s;
+                }
+              }
+              .past-show {
+                pointer-events: none;
+                opacity: 0.5;
+              }
+            }
+          }
+        };
+      }
+    }
+    
+    .right-container {
+      display: flex;
+      height: 100%;
+      width: 45%;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+
+      .main-img {
+        width: 57%;
+        height: 80%;
+        left: 20%;
+        position: relative;
+        background-image: url("../images/TJ_Live.jpg");
+        background-size: cover;
+        background-position-x: 50%;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+// -------------------- MEDIA QUERIES ---------------------- //
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+    .shows {
+      height: auto;
+    }
+    .shows .container {
+      padding: 0;
+      flex-wrap: wrap;
+      position: relative;
+
+      .left-container {
+        width: 100%;
+        height: 60vh;
+        position: relative;
+        justify-content: center;
+        
+        .main {
+          height: 90%;
+
+          h1 {
+            font-size: 1.1rem;
+          }
+
+          .show-more {
+            margin-left: 0;
+
+          }
+
+          .events {
+            margin-left: 0;
+            width: 100%;
+
+            li {
+              font-size: 0.5rem;
+
+              .rsvp a {
+                font-size: 0.4rem;
+                padding: 0.3rem 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      .right-container {
+        display: none;
+      }
+    }
+}
+
+
+
+
+
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .shows {
+      height: auto;
+    }
+    .shows .container {
+      padding: 0;
+      flex-wrap: wrap;
+      position: relative;
+
+      .left-container {
+        width: 100%;
+        height: 60vh;
+        position: relative;
+        justify-content: center;
+        
+        .main {
+          height: 90%;
+
+          h1 {
+            font-size: 1.1rem;
+          }
+
+          .show-more {
+            margin-left: 0;
+
+          }
+
+          .events {
+            margin-left: 0;
+            width: 100%;
+
+            li {
+              font-size: 0.5rem;
+
+              .rsvp a {
+                font-size: 0.4rem;
+                padding: 0.3rem 0.5rem;
+              }
+            }
+          }
+        }
+      }
+
+      .right-container {
+        display: none;
+      }
+    }
+}
+
+
+
+
+
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .shows {
+      height: 60vh;
+    }
+    .shows .container {
+      padding: 0;
+      padding-left: 1rem;
+    }
+    .shows .container .left-container .main {
+      width: 93%;
+    }
+    .shows .container .left-container .main .events {
+      margin-left: 0;
+      width: 100%;
+      li {
+        font-size: 0.5rem;
+        .rsvp {
+          width: 30%;
+          a {
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+    .shows .container .left-container .main .show-more {
+      margin: 0;
+      font-size: 0.7rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .shows .container .left-container .main {
+      width: 93%;
+    }
+    .shows .container .left-container .main .events {
+      margin-left: 0;
+      width: 100%;
+      li {
+        font-size: 0.6rem;
+        .rsvp {
+          width: 30%;
+          a {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+    .shows .container .left-container .main .show-more {
+      margin: 0;
+      font-size: 0.7rem;
+    }
+}
+
+
+
+
+
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 834px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .shows {
+      height: 60vh;
+    }
+    .shows .container .left-container .main {
+      width: 93%;
+    }
+    .shows .container .left-container .main .events {
+      margin-left: 0;
+      width: 100%;
+      li {
+        font-size: 0.5rem;
+        .rsvp {
+          width: 30%;
+          a {
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+    .shows .container .left-container .main .show-more {
+      margin: 0;
+      font-size: 0.7rem;
+    }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen 
+  and (min-device-width: 1112px) 
+  and (max-device-width: 1112px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .shows .container .left-container .main {
+      width: 93%;
+    }
+    .shows .container .left-container .main .events {
+      margin-left: 0;
+      width: 100%;
+      li {
+        font-size: 0.6rem;
+        .rsvp {
+          width: 30%;
+          a {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+    .shows .container .left-container .main .show-more {
+      margin: 0;
+      font-size: 0.7rem;
+    }
+}
+
+
+
+
+
+
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait  ) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .shows {
+      height: 60vh;
+    }
+    .shows .container .left-container .main .events {
+      margin-left: 0;
+      width: 100%;
+      li {
+        font-size: 0.7rem;
+        .rsvp {
+          width: 30%;
+          a {
+            font-size: 0.7rem;
+          }
+        }
+      }
+    }
+}
+
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  .shows .container {
+    width: 90%;
+  }
+}

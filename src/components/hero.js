@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useScroll } from '../aux/useScroll.js'
 
+import '../styles/hero.scss'
+
 const Hero = () => {
   const [ leftAlbumActive, setLeftAlbumActive] = useState(false);
   const  scrollY = useScroll().scrollY;

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import logo from "../images/Logo_lg.png"
+import '../styles/header.scss'
 
 import useDocumentScrollThrottled from '../aux/useDocumentScrollThrottled'
 
@@ -39,7 +40,7 @@ function Header() {
               {/* <AniLink cover direction="left" to="/home" duration={0.8} bg="black">Home</AniLink> */}
               <Link to="#music">Music</Link>
               <Link to="#shows">Shows</Link>
-              <Link to="#contact">Contact</Link>
+              <Link style={{marginRight: 0}} to="#contact">Contact</Link>
             </nav>
           </div>
         </div>
