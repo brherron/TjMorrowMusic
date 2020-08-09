@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useScroll } from '../aux/useScroll.js'
+import { useSwipeable } from 'react-swipeable'
 
 import '../styles/hero.scss'
 
@@ -9,9 +10,18 @@ const Hero = () => {
 
   function clickAlbum(e) {
     setLeftAlbumActive(!leftAlbumActive);
-    e.target.parentNode.style.left = leftAlbumActive ? "-80%" : "0%";
-    e.target.parentNode.parentNode.parentNode.style.left = leftAlbumActive ? "-5%" : "-20%";
   }
+
+  const handlers = useSwipeable ({
+    onSwipedLeft: () => {
+      setLeftAlbumActive(false)
+    },
+    onSwipedRight: () =>  {
+      setLeftAlbumActive(true)
+    },
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  })
 
   return (
     <div id="music" className="hero">
@@ -27,9 +37,9 @@ const Hero = () => {
          </div>
         </div>
         <div className="right-container">
-          <div className="main">
-            <div className="album-frame">
-              <div className="album-slider">
+          <div className="main" style={{left: !leftAlbumActive ? "-5%" : "-20%"}}>
+            <div {...handlers} className="album-frame">
+              <div className="album-slider" style={{left: !leftAlbumActive ? "-80%" : "0%"}}>
                 <div role="button" tabIndex={0} className={leftAlbumActive ? "album1 active-album" : "album1 inactive-album"} onClick={clickAlbum} onKeyDown={clickAlbum} ></div>
                 <div role="button" tabIndex={0} className={leftAlbumActive ? "album2 inactive-album" : "album2 active-album"} onClick={clickAlbum} onKeyDown={clickAlbum}></div>
               </div>
@@ -52,3 +62,4 @@ const Hero = () => {
 }
 
 export default Hero
+
