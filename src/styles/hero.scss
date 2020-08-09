@@ -230,6 +230,10 @@
       }
     }
   }
+
+  .mobile-landscape {
+    display: none;
+  }
 }
 
 
@@ -240,11 +244,41 @@
 
 // -------------------- MEDIA QUERIES ---------------------- //
 
+// Blocking landscape.
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+    .hero .container {
+      display: none;
+    }
+    .hero .mobile-landscape {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      height: 100%;
+      width: 100%;
+      animation: fade-in-light 0.5s ease-in 0s;
+      
+
+      .rotate {
+        background-image: url("../images/rotate.svg");  
+        background-size: cover;  
+        width: 15%;
+        height: 0;
+        padding-bottom: 15%;
+        opacity: 0.8;
+        animation: pulse-light 1s 3 ease-in-out 0.5s;
+      }
+    }
+}
+
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 300px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
@@ -622,4 +656,60 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .hero .container .right-container .main .album-frame .album-text {
     padding-top: 0;
   }
+}
+
+
+
+// Fade in
+.fadeIn {
+  -webkit-animation: fade-in 0.3s ease-in;
+  -moz-animation:    fade-in 0.3s ease-in;
+  -o-animation:      fade-in 0.3s ease-in;
+  animation:         fade-in 0.3s ease-in;
+}
+@-webkit-keyframes fade-in-light {
+  0%   { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+@-moz-keyframes fade-in-light {
+  0%   { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+@-o-keyframes fade-in-light {
+  0%   { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+@keyframes fade-in-light {
+  0%   { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+
+
+// Pulse
+.pulse {
+  -webkit-animation: pulse 1.5s infinite;
+  -moz-animation:    pulse 1.5s infinite;
+  -o-animation:      pulse 1.5s infinite;
+  animation:         pulse 1.5s infinite;
+}
+
+@-webkit-keyframes pulse-light {
+  0%   { opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.8; }
+}
+@-moz-keyframes pulse-light {
+  0%   { opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.8; }
+}
+@-o-keyframes pulse-light {
+  0%   { opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.8; }
+}
+@keyframes pulse-light {
+  0%   { opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.8; }
 }

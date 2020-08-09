@@ -96,6 +96,32 @@ header {
 
 
 // -------------------- MEDIA QUERIES ---------------------- //
+/* ----------- General Phone ----------- */
+
+/* Portrait */
+@media screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 375px) 
+  and (orientation: portrait) {
+    header .inner-header {
+      padding: 0 0.5rem 0 0.5rem;
+    }
+    header .inner-header .logo img {
+      height: 30px;
+    }
+    header .inner-header .navigation nav a {
+      font-size: 0.6rem;
+      margin: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
@@ -114,6 +140,17 @@ header {
     header .inner-header .navigation nav a {
       font-size: 0.6rem;
       margin: 1rem;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+    header {
+      display: none;
+
     }
 }
 

@@ -44,6 +44,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <div className="mobile-landscape">
+        <div className="rotate"></div>
+      </div>
     </div>
   )
 }

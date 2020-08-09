@@ -311,12 +311,29 @@
 
 
 
+// -------------------- MEDIA QUERIES ---------------------- //
+/* Landscape */
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+    .contact {
+      display: none;
+    }
+}
+
+
+
+
+
+
+
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 375px) 
+  and (min-device-width: 300px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
@@ -762,4 +779,62 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .contact .container {
     width: 90%;
   }
+}
+
+
+
+
+
+// Fade in
+.fadeIn {
+  -webkit-animation: fade-in 0.3s ease-in;
+  -moz-animation:    fade-in 0.3s ease-in;
+  -o-animation:      fade-in 0.3s ease-in;
+  animation:         fade-in 0.3s ease-in;
+}
+@-webkit-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fade-in {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+// Pulse
+.pulse {
+  -webkit-animation: pulse 1.5s infinite;
+  -moz-animation:    pulse 1.5s infinite;
+  -o-animation:      pulse 1.5s infinite;
+  animation:         pulse 1.5s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0%   { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@-moz-keyframes pulse {
+  0%   { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@-o-keyframes pulse {
+  0%   { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+@keyframes pulse {
+  0%   { opacity: 0.3; }
+  65% { opacity: 1; }
+  100% { opacity: 0.3; }
 }
