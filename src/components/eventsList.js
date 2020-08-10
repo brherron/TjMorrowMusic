@@ -5,7 +5,7 @@ function EventsList() {
   var eventData = []
   var upcomingShows = true
   var error = false
-  var artistURL = "/" ;
+  var artistURL = "https://www.bandsintown.com/a/15379250?came_from=267&app_id=9d9a916d45001c8065fe65ee0c368f39" ;
   const currentDate = new Date()
 
   useEffect(() => {
@@ -44,6 +44,7 @@ function EventsList() {
 
     if (eventData[0].artist) {
       artistURL = eventData[0].artist.url
+      console.log(artistURL)
     }
 
     setEventsList( events.map((event) =>
