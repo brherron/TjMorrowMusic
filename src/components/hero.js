@@ -5,19 +5,28 @@ import { useSwipeable } from 'react-swipeable'
 import '../styles/hero.scss'
 
 const Hero = () => {
-  const [ leftAlbumActive, setLeftAlbumActive] = useState(false);
+  const [ leftAlbumActive, setLeftAlbumActive ] = useState(false);
+  const [ leftAmount, setLeftAmount ] = useState(-80)
   const  scrollY = useScroll().scrollY;
 
   function clickAlbum(e) {
     setLeftAlbumActive(!leftAlbumActive);
   }
 
-  const handlers = useSwipeable ({
+  const swipeHandlers = useSwipeable ({
+    onSwiping: (e) => {
+      if ( -95 < leftAmount && leftAmount < 15) {
+        setLeftAmount(leftAmount + e.event.movementX/5)
+      }
+    },
     onSwipedLeft: () => {
       setLeftAlbumActive(false)
+      setLeftAmount(-80)
     },
     onSwipedRight: () =>  {
       setLeftAlbumActive(true)
+      setLeftAmount(0)
+
     },
     preventDefaultTouchmoveEvent: true,
     trackMouse: true
@@ -38,8 +47,8 @@ const Hero = () => {
         </div>
         <div className="right-container">
           <div className="main" style={{left: !leftAlbumActive ? "-5%" : "-20%"}}>
-            <div {...handlers} className="album-frame">
-              <div className="album-slider" style={{left: !leftAlbumActive ? "-80%" : "0%"}}>
+            <div {...swipeHandlers} className="album-frame">
+              <div className="album-slider" style={{left: leftAmount+"%"}}>
                 <div role="button" tabIndex={0} className={leftAlbumActive ? "album1 active-album" : "album1 inactive-album"} onClick={clickAlbum} onKeyDown={clickAlbum} ></div>
                 <div role="button" tabIndex={0} className={leftAlbumActive ? "album2 inactive-album" : "album2 active-album"} onClick={clickAlbum} onKeyDown={clickAlbum}></div>
               </div>
