@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 
 function EventsList() {
   const [eventsList, setEventsList] = useState([])
+  const [ upcomingShows, setUpcomingShows ] = useState(true)
+  const [ artistURL, setArtistURL ] = useState("/")
+  const [ error, setError ] = useState(false)
+  var currentDate = new Date()
   var eventData = []
-  var upcomingShows = true
-  var error = false
-  var artistURL = "https://www.bandsintown.com/a/15379250?came_from=267&app_id=9d9a916d45001c8065fe65ee0c368f39" ;
-  const currentDate = new Date()
 
   useEffect(() => {
     fetchEvents();
@@ -24,14 +24,14 @@ function EventsList() {
         buildEventsList()
       })
       .catch(err => {
-        error = true
+        setError(true)
         console.log(err)
       });
   }
 
   const buildEventsList = () => {
     const events = eventData.slice(1).slice(-5);
-    const lastEvent = events[4];
+    const lastEvent = events[events.length - 1];
     const lastEventDate = new Date(lastEvent.datetime)
     const formatter = new Intl.DateTimeFormat('en-US', {  
                   month: 'short',
@@ -39,12 +39,11 @@ function EventsList() {
                 });
 
     if (currentDate > lastEventDate) {
-      upcomingShows = false
+      setUpcomingShows(false)
     }
 
     if (eventData[0].artist) {
-      artistURL = eventData[0].artist.url
-      console.log(artistURL)
+      setArtistURL(eventData[0].artist.url)
     }
 
     setEventsList( events.map((event) =>
