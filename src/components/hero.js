@@ -5,8 +5,9 @@ import { useSwipeable } from 'react-swipeable'
 import '../styles/hero.scss'
 
 const Hero = () => {
-  const [ leftAlbumActive, setLeftAlbumActive ] = useState(false);
+  const [ leftAlbumActive, setLeftAlbumActive ] = useState(false)
   const [ leftAmount, setLeftAmount ] = useState(-80)
+  const [ touchDelta, setTouchDelta ] = useState(0)
   const  scrollY = useScroll().scrollY;
 
   function clickAlbum(e) {
@@ -15,8 +16,18 @@ const Hero = () => {
 
   const swipeHandlers = useSwipeable ({
     onSwiping: (e) => {
-      if ( -95 < leftAmount && leftAmount < 15) {
-        setLeftAmount(leftAmount + e.event.movementX/5)
+      var delta = leftAmount - (e.deltaX - touchDelta)
+      if ( -95 < delta && delta < 15) {
+        setLeftAmount(delta)
+        if (leftAlbumActive) {
+          if (-15 < e.deltaX && e.deltaX < 95) {
+            setTouchDelta(e.deltaX)
+          }
+        } else {
+          if (15 > e.deltaX && e.deltaX > -95) {
+            setTouchDelta(e.deltaX)
+          }
+        }
       }
     },
     onSwipedLeft: () => {
@@ -26,7 +37,6 @@ const Hero = () => {
     onSwipedRight: () =>  {
       setLeftAlbumActive(true)
       setLeftAmount(0)
-
     },
     preventDefaultTouchmoveEvent: true,
     trackMouse: true
@@ -47,8 +57,8 @@ const Hero = () => {
         </div>
         <div className="right-container">
           <div className="main" style={{left: !leftAlbumActive ? "-5%" : "-20%"}}>
-            <div {...swipeHandlers} className="album-frame">
-              <div className="album-slider" style={{left: leftAmount+"%"}}>
+            <div className="album-frame">
+              <div className="album-slider" {...swipeHandlers} style={{left: leftAmount+"%"}}>
                 <div role="button" tabIndex={0} className={leftAlbumActive ? "album1 active-album" : "album1 inactive-album"} onClick={clickAlbum} onKeyDown={clickAlbum} ></div>
                 <div role="button" tabIndex={0} className={leftAlbumActive ? "album2 inactive-album" : "album2 active-album"} onClick={clickAlbum} onKeyDown={clickAlbum}></div>
               </div>
