@@ -285,7 +285,7 @@
           .album-frame {
             width: 95%;
             height: 85%;
-            top: 0;
+            top: -20%;
             padding-top: 3rem;
 
             .album-text {
@@ -310,43 +310,12 @@
 @media only screen 
   and (max-width: 736px) 
   and (orientation: portrait) { 
-    .hero {
-      height: auto;
-    }
     .hero .container {
-      padding: 0;
-      flex-wrap: wrap;
-      position: relative;
-
-      .left-container {
-        width: 100%;
-        height: 90vh;
-        position: relative;
-
-        .main {
-          width: 80%;
-          bottom: 0;
-
-          .bio-text {
-            font-size: 0.6rem;
-          }
-        }
-        .main-text {
-          right: 0;
-          width: 100%;
-          padding-bottom: 17%;
-          margin-bottom: 2rem;
-        }
-      }
 
       .right-container {
-        width: 100%;
         height: 100vh;
-        position: relative;
         
         .main {
-          left: 0!important;
-          justify-content: center;
 
           .album-frame {
             width: 95%;
@@ -375,58 +344,16 @@
 
 /* Portrait */
 @media only screen 
-  and (max-width: 1024px) 
+  and (max-width: 767px) 
   and (orientation: portrait) { 
-    .hero {
-      height: auto;
-    }
     .hero .container {
-      padding: 0;
-      flex-wrap: wrap;
-      position: relative;
-
-      .left-container {
-        width: 100%;
-        height: 90vh;
-        position: relative;
-
-        .main {
-          width: 80%;
-          bottom: 0;
-
-          .bio-text {
-            font-size: 0.6rem;
-          }
-        }
-        .main-text {
-          right: 0;
-          width: 100%;
-          padding-bottom: 17%;
-          margin-bottom: 2rem;
-        }
-      }
 
       .right-container {
-        width: 100%;
-        height: 100vh;
-        position: relative;
         
         .main {
-          left: 0!important;
-          justify-content: center;
 
           .album-frame {
-            width: 95%;
             height: 90%;
-            top: 0;
-            padding-top: 3rem;
-
-            .album-text {
-              font-size: 0.6rem;
-              width: 90%;
-              padding: 1.7rem;
-              top: 50%;
-            }
           }
         }
       }
