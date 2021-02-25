@@ -79,9 +79,12 @@
             .venue {
               height: 100%;
               width: 40%;
+              padding-left: 1rem;
               display: flex;
-              justify-content: center;
+              justify-content: left;
               align-items: center;
+              white-space: nowrap;
+              overflow: hidden;
               font-weight: 300;
             }
             .city {

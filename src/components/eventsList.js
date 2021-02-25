@@ -5,8 +5,9 @@ function EventsList() {
   const [ upcomingShows, setUpcomingShows ] = useState(true)
   const [ artistURL, setArtistURL ] = useState("/")
   const [ error, setError ] = useState(false)
-  var currentDate = new Date()
+  var currentDate = new Date() 
   var eventData = []
+  var datesToDisplay = 5
 
   useEffect(() => {
     fetchEvents();
@@ -30,8 +31,8 @@ function EventsList() {
   }
 
   const buildEventsList = () => {
-    const events = eventData.slice(1).slice(-5);
-    const lastEvent = events[events.length - 1];
+    const events = eventData.slice(0).reverse();
+    const lastEvent = events[0];
     const lastEventDate = new Date(lastEvent.datetime)
     const formatter = new Intl.DateTimeFormat('en-US', {  
                   month: 'short',
@@ -46,8 +47,11 @@ function EventsList() {
       setArtistURL(eventData[0].artist.url)
     }
 
-    setEventsList( events.map((event) =>
-      <li key={event.id}>
+    const eventList = organizeEvents(events)
+
+    setEventsList( eventList.map((event) => {
+      
+      return <li key={event.id}>
         <span className="date">
           {formatter.format(new Date(event.datetime)).toUpperCase()}
         </span>
@@ -60,8 +64,34 @@ function EventsList() {
           }
         </span>
       </li>
-    ));
+    }));
   }
+
+  const organizeEvents = (events) => {
+    var newEventList = []
+
+    for (var i = 0; i < events.length-1; i++) {
+
+      if (currentDate < new Date(events[i].datetime)) {
+        //Future event. We want as many of these as possible.
+        if (newEventList.length < datesToDisplay) {
+          //If there are less than we want to display, add to list.
+          newEventList.unshift(events[i])
+        } else {
+          //If there are more, add to list and remove furthest date away.
+          newEventList.pop()
+          newEventList.unshift(events[i])
+        }
+      } else {
+        //Past event, add it only if there is room to display.
+        if (newEventList.length < datesToDisplay) {
+          newEventList.unshift(events[i])
+        }
+      }
+    }
+
+    return newEventList
+  } 
 
   return (
       <div className="main" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
