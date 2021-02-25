@@ -210,8 +210,7 @@
 
 // Blocking landscape.
 @media only screen 
-  and (min-device-width: 300px) 
-  and (max-device-width: 812px) 
+  and (max-width: 812px) 
   and (orientation: landscape) { 
     .hero .container {
       display: none;
@@ -242,9 +241,7 @@
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 300px) 
-  and (max-device-width: 413px) 
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (max-width: 413px) 
   and (orientation: portrait) { 
     .hero {
       height: auto;
@@ -311,9 +308,7 @@
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
+  and (max-width: 736px) 
   and (orientation: portrait) { 
     .hero {
       height: auto;
@@ -380,9 +375,7 @@
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 413px) 
-  and (-webkit-min-device-pixel-ratio: 3)
+  and (max-width: 1024px) 
   and (orientation: portrait) { 
     .hero {
       height: auto;
@@ -440,55 +433,10 @@
     }
 }
 
-
-
-
-
-
-
-/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .hero {
-      height: 60vh;
-    }
-    .hero .container {
-      padding: 0;
-    }
-    .hero .container .left-container .main .bio-text {
-      font-size: 0.5rem;
-    }
-    .hero .container .right-container .main .album-frame .album-slider {
-      height: 35%;
-    }
-    .hero .container .right-container .main .album-frame .album-text {
-      padding: 2rem;
-      padding-top: 0;
-      padding-left: 0;
-      font-size: 0.4rem;
-      top: 35%;
-    }
-}
-
 /* Landscape */
 @media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (max-width: 1112px) 
+  and (orientation: landscape)  {
     .hero .container .left-container .main .bio-text {
       font-size: 0.6rem;
     }
@@ -503,73 +451,6 @@
       top: 35%;
     }
 }
-
-
-
-
-
-
-/* ----------- iPad Pro 10.5" ----------- */
-
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 1112px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .hero .container {
-      padding: 0;
-    }
-}
-
-/* Portrait */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 834px) 
-  and (max-device-width: 834px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .hero {
-      height: 60vh;
-    }
-    .hero .container .left-container .main .bio-text {
-      font-size: 0.4rem;
-    }
-    .hero .container .right-container .main .album-frame .album-slider {
-      height: 35%;
-    }
-    .hero .container .right-container .main .album-frame .album-text {
-      padding: 2rem;
-      padding-top: 0;
-      padding-left: 0;
-      font-size: 0.4rem;
-      top: 35%;
-    }
-}
-
-/* Landscape */
-/* Declare the same value for min- and max-width to avoid colliding with desktops */
-/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen 
-  and (min-device-width: 1112px) 
-  and (max-device-width: 1112px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .hero .container .left-container .main .bio-text {
-      font-size: 0.6rem;
-    }
-    .hero .container .right-container .main .album-frame .album-slider {
-      height: 35%;
-    }
-    .hero .container .right-container .main .album-frame .album-text {
-      padding: 2rem;
-      padding-top: 0;
-      padding-left: 0;
-      font-size: 0.6rem;
-      top: 35%;
-    }
-}
-
 
 
 
@@ -581,19 +462,19 @@
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (min-width: 1024px) 
+  and (max-width: 1366px)
+  and (-webkit-min-pixel-ratio: 2) {
 
 }
 
 /* Portrait */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen 
-and (min-device-width: 1024px) 
-and (max-device-width: 1024px) 
+and (min-width: 1024px) 
+and (max-width: 1024px) 
 and (orientation: portrait  ) 
-and (-webkit-min-device-pixel-ratio: 2) {
+and (-webkit-min-pixel-ratio: 2) {
     .hero {
       height: 60vh;
     }
@@ -619,10 +500,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 @media only screen 
-  and (min-device-width: 1366px) 
-  and (max-device-width: 1366px) 
+  and (min-width: 1366px) 
+  and (max-width: 1366px) 
   and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 2) {
+  and (-webkit-min-pixel-ratio: 2) {
     .hero .container .left-container .main-text {
       margin-bottom: 3rem;
     }
@@ -639,9 +520,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
+  and (min-width: 1200px) 
+  and (max-width: 1600px) 
+  and (-webkit-min-pixel-ratio: 1) { 
     .hero .container .left-container .main {
       height: 75%;
       width: 60%;
@@ -664,9 +545,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 /* ----------- Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-width: 1200px) 
+  and (max-width: 1600px) 
+  and (-webkit-min-pixel-ratio: 2)
   and (min-resolution: 192dpi) { 
 
 }
