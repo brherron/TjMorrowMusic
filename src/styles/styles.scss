@@ -1,6 +1,8 @@
 //Fonts
 $font: 'proxima-nova', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 
+@import "~bulma/bulma.sass";
+
 //Animations
 @mixin animation($animate...) {
   $max: length($animate);
@@ -62,9 +64,8 @@ html, body {
 
 .container {
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   opacity: 0;
-  position: absolute;
   @include animation('on 0.8s ease-in-out 0s forwards');
 }
 
@@ -147,4 +148,115 @@ h1 {
   0%   { opacity: 0.3; }
   65% { opacity: 1; }
   100% { opacity: 0.3; }
+}
+
+
+
+// ------ SECTIONS ------- //
+//Header Section.
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent;
+
+  .inner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    width: 100%;
+    padding: 0 0.5rem;
+    transition: 0.3s;
+
+    .logo {
+      align-items: center;
+      position: relative;
+      pointer-events: none;
+      
+      img {
+        display: block;
+        height: 30px;
+        transition: opacity 0.3s;
+      }
+      span {
+        padding-left: 10px;
+        position: absolute;
+        bottom: 25%;
+        white-space: nowrap;
+        text-decoration: none;
+        color: #D0D0D0;
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 4px;
+        transition: 0.3s;
+      }
+    }
+    .navigation {
+      nav {
+        a {
+          font-size: 0.55rem;
+          margin: 1rem;
+          text-decoration: none;
+          letter-spacing: 1.75px;
+          color: #D0D0D0;
+          opacity: 0.6;
+          transition: 0.3s;
+          &:hover {
+            opacity: 1;
+            transition: 0.3s;
+          }
+        }
+        a:last-of-type() {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+//Hero Section.
+.hero {
+
+  .left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+
+    figure {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .bio-text {
+      padding-top: 2rem;
+      width: 94%;
+      left: 17.5%;
+      bottom:11.5%;
+      color: #D0D0D0;
+      font-size: 0.85rem;
+      line-height: 1.4rem;
+      letter-spacing: 0.05rem;
+      pointer-events: none;
+    }
+  }
+}
+
+//Shows Section.
+.shows {
+  visibility: hidden;
+}
+
+//Contact Section.
+.contact {
+  visibility: hidden;
 }
