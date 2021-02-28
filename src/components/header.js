@@ -13,7 +13,6 @@ function Header() {
           </div>
           <div className="navigation">
             <nav>
-              {/* <AniLink cover direction="left" to="/home" duration={0.8} bg="black">Home</AniLink> */}
               <Link to="#music">Music</Link>
               <Link to="#shows">Shows</Link>
               <Link to="#contact">Contact</Link>

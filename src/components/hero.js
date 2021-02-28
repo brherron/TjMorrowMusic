@@ -59,7 +59,7 @@ function Hero() {
             <div className={leftAlbumActive ? "main left-frame" : "main right-frame"}>
               <div {...swipeHandlers} className="album-frame">
                 <div className="album-slider" style={{left: !leftAlbumActive ? "-80%" : "0%"}}>
-                  <div role="button" tabIndex={0} className={leftAlbumActive ? "album1 active-album" : "album1 inactive-album"} onClick={clickAlbum} onKeyDown={clickAlbum} ></div>
+                  <div role="button" tabIndex={0} className={leftAlbumActive ? "album1 active-album" : "album1 inactive-album"} onClick={clickAlbum} onKeyDown={clickAlbum}></div>
                   <div role="button" tabIndex={0} className={leftAlbumActive ? "album2 inactive-album" : "album2 active-album"} onClick={clickAlbum} onKeyDown={clickAlbum}></div>
                 </div>
                 <div className="album-text">

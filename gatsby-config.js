@@ -38,8 +38,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    'gatsby-plugin-transition-link',
-    'react-typical',
-    'react-burger-menu'
+    {
+      resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+        threshold: 0.2,
+        once: false, // Defines if animation needs to be launched once
+      }
+    }
   ],
 }

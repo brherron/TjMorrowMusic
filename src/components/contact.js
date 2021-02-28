@@ -8,9 +8,18 @@ const Contact = () => {
         <div className="columns is-centered">
           <div className="column left-container">
             <div className="main">
-              <div className="box"></div>
-              <div className="image">
-                <div className="socials">
+              <div className="box"
+                  data-sal="slide-right"
+                  data-sal-delay="100"
+                  data-sal-easing="ease-out-cubic" data-sal-duration="700"></div>
+              <div className="image"
+                  data-sal="slide-right"
+                  data-sal-delay="000"
+                  data-sal-easing="ease-out-cubic" data-sal-duration="700">
+                <div className="socials"
+                  data-sal="slide-right"
+                  data-sal-delay="500"
+                  data-sal-easing="ease-out-cubic" data-sal-duration="700">
                   <span className="follow">Follow</span> 
                   <a className="instagram" target="_blank" href="https://www.instagram.com/tjmorrowmusic/" rel="noopener noreferrer">IG.</a> — 
                   <a className="facebook" target="_blank" href="https://www.facebook.com/tjmorrowmusic/" rel="noopener noreferrer"> FB.</a> — 
@@ -19,7 +28,10 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="column right-container">
+          <div className="column right-container"
+                  data-sal="slide-left"
+                  data-sal-delay="300"
+                  data-sal-easing="ease-out-cubic" data-sal-duration="700">
             <div className="main">
               <ContactForm />
             </div>
