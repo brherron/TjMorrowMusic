@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
-import { useScroll } from '../aux/useScroll.js'
 import { useSwipeable } from 'react-swipeable'
 import HeroImage from '../images/mainImg.jpg'
 
-const Hero = () => {
-  const [ leftAlbumActive, setLeftAlbumActive] = useState(false);
-  const  scrollY = useScroll().scrollY;
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+
+function Hero() {
+  const [leftAlbumActive, setLeftAlbumActive] = useState(false);
+  const [mainTextStyle, setMainTextStyle] = useState({
+    bottom: '40%'
+  })
 
   function clickAlbum(e) {
     setLeftAlbumActive(!leftAlbumActive);
   }
+
+  useScrollPosition(
+    ({ currPos }) => {
+      const newStyle = {
+        bottom: `${-currPos.y/30+40}%`
+      }
+
+      if (JSON.stringify(newStyle) === JSON.stringify(mainTextStyle)) return
+
+      setMainTextStyle(newStyle)
+
+    }, [mainTextStyle]
+  )
 
   const swipeHandlers = useSwipeable ({
     onSwipedLeft: () => {
@@ -23,7 +39,7 @@ const Hero = () => {
   })
 
   return (
-    <div id="music" className="hero">
+    <div className="hero">
       <div className="container">
         <div className="columns is-centered">
           <div className="column left-container">
@@ -36,11 +52,11 @@ const Hero = () => {
                 Tj Morrow first picked up a guitar while in college and he hasn't looked back since. The midwest-based artist has performed in many bands throughout his 10 years of playing music. In 2019 he released his debut EP as a solo country artist.
               </div>
           </div>
-          <div className="main-text" style={{bottom: (scrollY/30+40)+'%'}}>
+          <div className="main-text" style={{ ...mainTextStyle }}>
           </div>
           </div>
-          <div className="column right-container">
-            <div className="main" style={{left: !leftAlbumActive ? "-5%" : "-20%"}}>
+          <div id="music" className="column right-container">
+            <div className={leftAlbumActive ? "main left-frame" : "main right-frame"}>
               <div {...swipeHandlers} className="album-frame">
                 <div className="album-slider" style={{left: !leftAlbumActive ? "-80%" : "0%"}}>
                   <div role="button" tabIndex={0} className={leftAlbumActive ? "album1 active-album" : "album1 inactive-album"} onClick={clickAlbum} onKeyDown={clickAlbum} ></div>

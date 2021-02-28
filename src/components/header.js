@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import logo from "../images/Logo_lg.png"
 
 function Header() {
   
   return (
-    <header className="navbar">
+    <div className="navbar">
       <div className="container">
         <div className='inner-header'>
           <div className="logo">
@@ -21,7 +21,7 @@ function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 

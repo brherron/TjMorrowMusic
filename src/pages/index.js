@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import '../styles/styles.scss' 
 
 //Import Components
@@ -13,19 +13,17 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
 }
 
-class IndexPage extends Component {
+const IndexPage = () => {
 
-  render() {
-    return (
-      <div>
-        <SEO title="TJ MORROW" />
-        <Header />
-        <Hero />
-        <Shows />
-        <Contact />
-      </div>
-    )
-  }
+  return (
+    <div>
+      <SEO title="TJ MORROW" />
+      <Header />
+      <Hero />
+      <Shows />
+      <Contact />
+    </div>
+  )
 } 
 
 export default IndexPage

@@ -94,7 +94,7 @@ function EventsList() {
   } 
 
   return (
-      <div className="main" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <div className="main">
         <h1>{upcomingShows ? "Upcoming Shows" : "Recent Shows"}</h1>
         <div className="events">
           <span className="error-text" style={{visibility: error ? "visible" : "hidden"}}>There was an error loading event data.</span>
