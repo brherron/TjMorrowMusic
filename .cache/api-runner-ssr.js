@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('/Users/beauherron/Documents/Developer/FrontEnd/Tj Morrow Website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/beauherron/Documents/Developer/FrontEnd/TjMorrowWebsite/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/beauherron/Documents/Developer/FrontEnd/Tj Morrow Website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#000000","theme_color":"#000000","display":"minimal-ui","icon":"src/images/favicon.svg"},
+      plugin: require('/Users/beauherron/Documents/Developer/FrontEnd/TjMorrowWebsite/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#000000","theme_color":"#000000","display":"minimal-ui","icon":"src/images/favicon.svg","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"c26a965ebdc0a087a65af07a71edce96"},
     },{
-      plugin: require('/Users/beauherron/Documents/Developer/FrontEnd/Tj Morrow Website/node_modules/gatsby-plugin-transition-link/gatsby-ssr'),
+      plugin: require('/Users/beauherron/Documents/Developer/FrontEnd/TjMorrowWebsite/node_modules/gatsby-plugin-transition-link/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
