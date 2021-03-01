@@ -607,7 +607,7 @@ h1 {
         width: 100%;
         height: 100vh;
         position: relative;
-        justify-content: center;
+        justify-content: flex-start;
     
         .main {
           display: flex;
@@ -1062,6 +1062,10 @@ h1 {
       font-size: 0.8rem;
     }
 
+    .contact .container .columns .right-container {
+      justify-content: center;
+    }
+
     .contact .container .columns .right-container .main {
       height: auto;
 
@@ -1265,7 +1269,6 @@ h1 {
 
     .contact .container .columns .right-container {
       display: flex;
-      justify-content: center;
       align-items: flex-start;
       height: auto;
     
